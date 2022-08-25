@@ -31,4 +31,16 @@ and depending on Hadoop sort & reduce we should get the count of the 1st word fo
 <w1, w3>  
 <w1, w4> ... 
 
-doing the same for the 2nd word in Step2 would finally result in finding all the needed variables to calculate the Log likelihood ratio for every bigram.  
+doing the same for the 2nd word in Step2 would finally result in finding all the needed variables to calculate the Log likelihood ratio for every bigram. 
+  
+Running the application: (choose only one of 1a/1b)
+
+	1a-  Use Eclipse and specify Maven goals as : compile package for both projects (steps+Driver).  
+	1b-  Use cmd and navigate to the 2 projects and run this command for both "mvn compile && package"  
+	2-  The jar file from "steps" project should be uploaded to your S3 bucket (in my source code it's  
+	    uploaded to my bucket s3://emrhannaha).  
+	3-  Go to your Home directory (in Windows is usually: C:\Users\<ur username>), create directory ".aws" and  
+	    and create "credentials" file in it and fill with proper AWS credentials   
+	4-  Run the jar from the "driver" project locally on your PC with the following command:  
+	    "java -jar Mvozrot2-1.0-SNAPSHOT.jar ExtractCollations [heb/eng]"     
+       (choose heb or eng but not both at once)  
